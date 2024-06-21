@@ -58,6 +58,17 @@ Here's a simple sample on how to use this:
 
 Also, the [default.htm](/default.htm) file in this repo is a working example too.
 
+## Change Log
+
+### v1.0 - June 21, 2024
+
+- Enhance box highlighting to highlight the 'selectit' box when 'input' has focus. This makes the behavior act as expected like 'selectit' is more of a native input element.
+
+### v0.1 - 2011
+
+- Initial Release
+
+
 ## Author
 
 This project was created by [Chris Pietschmann](https://www.pietschsoft.com), and originally published in a [blog post](https://www.pietschsoft.com/post/2011/09/09/tag-editor-field-using-jquery-similar-to-stackoverflow) back in 2011. This jQuery plugin has since been updated slightly and put up here on GitHub for broader ability to be used.

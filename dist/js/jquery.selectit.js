@@ -42,12 +42,12 @@
             hiddeninput.attr('name', options.fieldname);
         }
         this.before(
-                    $('<span/>').addClass('selectit-option').html(tag).append(hiddeninput).append(
-                        $('<a/>').addClass('selectit-close').attr('title', 'remove').html('x').click(function () {
-                            $(this).parent().remove();
-                        })
-                    )
-                );
+                $('<span/>').addClass('selectit-option').html(tag).append(hiddeninput).append(
+                    $('<a/>').addClass('selectit-close').attr('title', 'remove').html('x').click(function () {
+                        $(this).parent().remove();
+                    })
+                )
+            );
     }
     function splitString(str) {
         var arr = str.split(',');
@@ -69,33 +69,33 @@
             this.addClass("selectit").each(function () {
                 // add input box
                 var input = $('<input/>').
-                                attr({ type: 'text' }).
-                                addClass('selectit-input').
-                                keyup(function (e) {
-                                    var elem = $(this);
-                                    if (keyCodes.isMatch(e.which, keyCodes.comma, keyCodes.control, keyCodes.enter, keyCodes.space)) {
-                                        parseValues.call(elem, that.data('selectit-options'));
-                                    }
-                                }).
-                                focus(function () {
-                                    $(that).addClass('focus');
-                                }).
-                                blur(function () {
-                                    parseValues.call($(this), that.data('selectit-options'));
-                                    $(that).removeClass('focus');
-                                }).
-                                keydown(function (e) {
-                                    var elem = $(this);
-                                    if (keyCodes.isMatch(e.which, keyCodes.backspace)) {
-                                        if (elem.val().length === 0) {
-                                            // remove the far right tag
-                                            var lastoption = elem.parent().parent().find('.selectit-option:last');
-                                            elem.val(lastoption.find('input').val());
-                                            lastoption.remove();
-                                            return false;
-                                        }
-                                    }
-                                });
+                    attr({ type: 'text' }).
+                    addClass('selectit-input').
+                    keyup(function (e) {
+                        var elem = $(this);
+                        if (keyCodes.isMatch(e.which, keyCodes.comma, keyCodes.control, keyCodes.enter, keyCodes.space)) {
+                            parseValues.call(elem, that.data('selectit-options'));
+                        }
+                    }).
+                    focus(function () {
+                        $(that).addClass('focus');
+                    }).
+                    blur(function () {
+                        parseValues.call($(this), that.data('selectit-options'));
+                        $(that).removeClass('focus');
+                    }).
+                    keydown(function (e) {
+                        var elem = $(this);
+                        if (keyCodes.isMatch(e.which, keyCodes.backspace)) {
+                            if (elem.val().length === 0) {
+                                // remove the far right tag
+                                var lastoption = elem.parent().parent().find('.selectit-option:last');
+                                elem.val(lastoption.find('input').val());
+                                lastoption.remove();
+                                return false;
+                            }
+                        }
+                    });
                 $('<span/>').addClass('selectit-new').append(input).appendTo(this);
                 $(that).click(function (e) {
                     if (e.target === this) {
@@ -109,10 +109,8 @@
         } else {
             var method = opts.toLowerCase();
             var value = arguments[1];
-
             // run methods on the selectit box
             // possible: add, remove, clear
-
             if (method === 'values') {
                 var values = [];
                 $(this).find('.selectit-option input[type=hidden]').each(function () {
@@ -129,7 +127,6 @@
                     addValue.call($(this).find('.selectit-new'), value[vi], $(this).data('selectit-options'));
                 }
             }
-
         }
         return this;
     };
