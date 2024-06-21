@@ -1,4 +1,4 @@
-# selectit - Tag Editor Field using jQuery
+# jquery.selectit - Tag Editor Field using jQuery
 
 ![selectit - Tag Editor Field using jQuery](img/jquery.selectit.jpg)
 
