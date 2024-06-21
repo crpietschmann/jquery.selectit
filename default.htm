@@ -1,0 +1,65 @@
+﻿<!--
+/*
+// jquery.selectit plugin v0.1 Alpha
+// Copyright (c) 2011 Chris Pietschmann
+// https://github.com/crpietschmann/jquery.selectit
+// MIT License
+*/
+-->
+<!doctype html />
+<html lang="en">
+<head>
+    <title></title>
+    
+    <link rel="Stylesheet" type="text/css" href="site.css" />
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/crpietschmann/jquery.selectit@v0.1/dist/css/jquery.selectit.css">
+</head>
+<body>
+
+    <h1></h1>
+
+    <h3>Tags:</h3>
+    <div id="SelectBox" style="width: 350px"></div>
+
+    <input id='btnClear' type='button' value='Clear' />
+    <input id='btnGetTags' type='button' value='Get Tags' />
+    <input id='btnAdd' type='button' value='Add Tag' />
+
+    <br /><br />
+    <small>
+    Copyright &copy; 2011 <a href='http://pietschsoft.com'>Chris Pietschmann</a><br />
+    This work is licensed under a <a href='http://creativecommons.org/licenses/by/3.0/us/'>Creative Commons Attribution 3.0 United States License</a>, unless explicitly stated otherwise within the posted content.
+    </small>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/crpietschmann/jquery.selectit@v0.1/dist/js/jquery.selectit.js"></script>
+    <script>
+        $(function () {
+            $('#SelectBox').selectit({
+                fieldname: 'tags',
+                values: [
+                    'javascript',
+                    'css',
+                    'jquery'
+                ]
+            });
+
+            $('#btnGetTags').click(function () {
+                alert($('#SelectBox').selectit('values').join(', '));
+            });
+
+            $('#btnClear').click(function () {
+                $('#SelectBox').selectit('clear');
+            });
+
+            $('#btnAdd').click(function () {
+                var tag = prompt('Enter tag to add:', '');
+                if (tag && tag !== '') {
+                    $('#SelectBox').selectit('add', tag);
+                }
+            });
+        });
+    </script>
+</body>
+</html>
