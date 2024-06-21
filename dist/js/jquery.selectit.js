@@ -1,6 +1,7 @@
 ﻿/*
-// jquery.selectit plugin v0.1 Alpha
-// Copyright (c) 2011 Chris Pietschmann
+// jquery.selectit plugin v1.0
+// Tag Editor Field using jQuery
+// Copyright (c) 2011-2024 Chris Pietschmann
 // https://github.com/crpietschmann/jquery.selectit
 // MIT License
 */
@@ -76,8 +77,12 @@
                                         parseValues.call(elem, that.data('selectit-options'));
                                     }
                                 }).
+                                focus(function () {
+                                    $(that).addClass('focus');
+                                }).
                                 blur(function () {
                                     parseValues.call($(this), that.data('selectit-options'));
+                                    $(that).removeClass('focus');
                                 }).
                                 keydown(function (e) {
                                     var elem = $(this);
@@ -92,6 +97,11 @@
                                     }
                                 });
                 $('<span/>').addClass('selectit-new').append(input).appendTo(this);
+                $(that).click(function (e) {
+                    if (e.target === this) {
+                        input.focus();
+                    }
+                });
             });
             if (options.values) {
                 this.selectit('add', options.values);

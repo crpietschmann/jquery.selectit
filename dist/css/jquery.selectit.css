@@ -1,6 +1,7 @@
 ﻿/*
-// jquery.selectit plugin v0.1 Alpha
-// Copyright (c) 2011 Chris Pietschmann
+// jquery.selectit plugin v1.0
+// Tag Editor Field using jQuery
+// Copyright (c) 2011-2024 Chris Pietschmann
 // https://github.com/crpietschmann/jquery.selectit
 // MIT License
 */
@@ -8,6 +9,7 @@
 {
     background: #fff;
     border: 1px solid #666;
+    border-radius: 0.25em;
     cursor: text;
     font-size: 14px;
     margin: 2px 3px 16px 0;
@@ -15,6 +17,10 @@
     width: 97%;
     overflow: hidden;
 }
+.selectit.focus {
+    border: solid 0.1em blue;
+}
+
 .selectit span
 {
     display: block;
@@ -33,6 +39,9 @@
     padding: 0 4px 3px 4px;
 }
 
+.selectit .selectit-new input:focus {
+    outline: none;
+}
 .selectit .selectit-new input 
 {
     background: inherit;
