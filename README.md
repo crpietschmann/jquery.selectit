@@ -6,7 +6,7 @@
 
 ```html
 <!-- CSS -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/crpietschmann/jquery.selectit@v1.0/dist/css/jquery.selectit.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/crpietschmann/jquery.selectit@v1.0/dist/css/jquery.selectit.css"/>
 
 <!-- Javascript -->
 <script src="https://cdn.jsdelivr.net/gh/crpietschmann/jquery.selectit@v1.0/dist/js/jquery.selectit.js"></script>
@@ -26,7 +26,7 @@ Here's a simple sample on how to use this:
 
     <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/crpietschmann/jquery.selectit@v1.0/dist/js/jquery.selectit.js"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/crpietschmann/jquery.selectit@v1.0/dist/css/jquery.selectit.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/crpietschmann/jquery.selectit@v1.0/dist/css/jquery.selectit.css"/>
     <script>
         $(function () {
             $('#SelectBox').selectit({
