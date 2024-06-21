@@ -1,15 +1,15 @@
 # selectit - Tag Editor Field using jQuery
 
-![selectit - Tag Editor Field using jQuery](img/jquery.selectit.png)
+![selectit - Tag Editor Field using jQuery](img/jquery.selectit.jpg)
 
 ## CDN Links
 
 ```html
 <!-- CSS -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/crpietschmann/jquery.selectit@v0.1/dist/css/jquery.selectit.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/crpietschmann/jquery.selectit@v1.0/dist/css/jquery.selectit.css">
 
 <!-- Javascript -->
-<script src="https://cdn.jsdelivr.net/gh/crpietschmann/jquery.selectit@v0.1/dist/js/jquery.selectit.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/crpietschmann/jquery.selectit@v1.0/dist/js/jquery.selectit.js"></script>
 ```
 
 ## Usage
@@ -25,8 +25,8 @@ Here's a simple sample on how to use this:
     <input id='btnAdd' type='button' value='Add Tag' />
 
     <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
-    <script src="https://cdn.jsdelivr.net/gh/crpietschmann/jquery.selectit@v0.1/dist/js/jquery.selectit.js"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/crpietschmann/jquery.selectit@v0.1/dist/css/jquery.selectit.css">
+    <script src="https://cdn.jsdelivr.net/gh/crpietschmann/jquery.selectit@v1.0/dist/js/jquery.selectit.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/crpietschmann/jquery.selectit@v1.0/dist/css/jquery.selectit.css">
     <script>
         $(function () {
             $('#SelectBox').selectit({
@@ -62,12 +62,14 @@ Also, the [default.htm](/default.htm) file in this repo is a working example too
 
 ### v1.0 - June 21, 2024
 
+- Modernize the CSS styles
+- Ensure compatibility with latest versions of jQuery and Bootstrap
+- Added animation: fade in when adding tag, fade out when removing tag
 - Enhance box highlighting to highlight the 'selectit' box when 'input' has focus. This makes the behavior act as expected like 'selectit' is more of a native input element.
 
 ### v0.1 - 2011
 
 - Initial Release
-
 
 ## Author
 

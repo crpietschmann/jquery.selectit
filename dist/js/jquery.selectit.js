@@ -24,7 +24,8 @@
     };
     var defaultOptions = {
         fieldname: null,
-        values: null
+        values: null,
+        animation: true
     };
     function parseValues(options) {
         var tags = splitString(this.val());
@@ -41,13 +42,22 @@
         if (options.fieldname) {
             hiddeninput.attr('name', options.fieldname);
         }
-        this.before(
-                $('<span/>').addClass('selectit-option').html(tag).append(hiddeninput).append(
-                    $('<a/>').addClass('selectit-close').attr('title', 'remove').html('x').click(function () {
-                        $(this).parent().remove();
-                    })
-                )
-            );
+        var xSVG = '<svg class="svg-icon iconClearSm pe-none" width="14" height="14" viewBox="0 0 14 14"><path d="M12 3.41L10.59 2 7 5.59 3.41 2 2 3.41 5.59 7 2 10.59 3.41 12 7 8.41 10.59 12 12 10.59 8.41 7z"></path></svg>';
+        var newElem = $('<span/>').addClass('selectit-option').html(tag).append(hiddeninput).append(
+            $('<button/>').addClass('selectit-remove').attr('alt', 'remove').html(xSVG).click(function () {
+                if (options.animation){
+                    $(this).parent().fadeOut(function() {
+                        $(this).remove();
+                    });
+                } else {
+                    $(this).parent().remove();
+                }
+            })
+        );
+        this.before(newElem);
+        if (options.animation) {
+            newElem.hide().fadeIn();
+        }
     }
     function splitString(str) {
         var arr = str.split(',');
